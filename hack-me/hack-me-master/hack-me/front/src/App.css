@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.homePageTitle {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 345px;
+}
+
+.latestInfo{
+  display: block;
+  text-align: center;
+  margin-left: 345px;
+}
+
+.table1{
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  line-height: normal;
+  font-weight: normal;
+  font-size: medium;
+  font-style: normal;
+  color: -internal-quirk-inherit;
+  text-align: start;
+  border-spacing: 2px;
+  border-color: gray;
+  white-space: normal;
+  font-variant: normal;
+  margin-left: 345px;
+}
