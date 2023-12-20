@@ -3,20 +3,15 @@
 /* */
 
 import './App.css';
-import { MyDropzoneBasic } from './FileUpload';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import GridBackgroundWIthText from './Functions/GridBackgroundWithText';
 import SideNav from './Functions/LeftNavigationMenu';
+import TableContents from './Functions/TableContents';
+import LeftImageAndDescription from "./Functions/LeftImageAndDescription";
+import UserInput from './UserInput';
 
-/*
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
-*/
 
 const theme = createTheme({
   palette: {
@@ -35,16 +30,6 @@ const theme = createTheme({
   },
 });
 
-/*
-const styles = {
-  primaryText: {
-    color: theme.palette.primary.main,
-  },
-  secondaryText: {
-    color: theme.palette.secondary.main,
-  },
-};
-*/
 const texts_to_repeat = 'ABE Hiroshi';
 const name_of_home_page = texts_to_repeat;
 const repeat_count = 4;
@@ -55,17 +40,25 @@ class App extends Component {
     return(
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <SideNav />
         <div>
           <h1 className="homePageTitle">{name_of_home_page}のホームページ</h1>
         </div>
         <table className="table1">
           <td>
-            <div className="latestInfo">
-              ★★★　最新情報　★★★
-            </div>
           </td>
         </table>
+        
+        <div style={{ display: 'flex', width: '100%' }}>
+        <div style={{ flex: '0 0 auto' }}> {/* flex-grow: 0, flex-shrink: 0, flex-basis: auto */}
+          <SideNav/>
+        </div>
+        <div style={{ flex: '0', marginLeft: '500px' }}> {/* flex-grow: 1, flex-shrink: 1, flex-basis: 0% */}
+          <LeftImageAndDescription/>
+        </div>
+        <div style={{ flex: '1' }}> {/* flex-grow: 1, flex-shrink: 1, flex-basis: 0% */}
+          <TableContents/>
+        </div>
+        </div>
 
 
         

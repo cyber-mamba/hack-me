@@ -8,7 +8,7 @@ interface UploadButtonProps {
 export default function UploadButton(props: UploadButtonProps) {
     return (
         <Button variant="contained" component="span" onClick={props.onFileUpload}>
-            Upload your shell...
+            宣材写真を選択してください
         </Button>
     );
 }
