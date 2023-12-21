@@ -5,6 +5,7 @@ import path from 'path';
 
 const app = express();
 app.use(cors());
+app.use('/upload', express.static('upload'))
 const port = 3001;
 
 // setting file strage
@@ -19,7 +20,7 @@ const storage = multer.diskStorage({
 });
 
 // const upload = multer({ storage: storage });
-const upload = multer({ dest: 'upload/', storage})
+const upload = multer({ dest: '../front/src/upload/', storage})
 
 app.post('/upload', upload.single('file'), (req: Request, res: Response) => {
   if (!req.file) {
