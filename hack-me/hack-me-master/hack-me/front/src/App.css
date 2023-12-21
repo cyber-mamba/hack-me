@@ -44,6 +44,13 @@
   margin-left: 345px;
 }
 
+.homePageSubTitle {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 345px;
+}
+
 .latestInfo{
   display: block;
   text-align: center;

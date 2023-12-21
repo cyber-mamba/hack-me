@@ -1,5 +1,6 @@
 import React from 'react';
 import { MyDropzoneBasic } from '../FileUpload';
+import UserInput from './UserInput';
 
 const SideNav = () => {
     return (
@@ -13,6 +14,7 @@ const SideNav = () => {
           <li style={styles.li6}><a href="http://localhost:3000" style={styles.a}>出版本</a></li>
           <li style={styles.li7}><a href="http://localhost:3000" style={styles.a}>管理者</a></li>
           <MyDropzoneBasic/>
+          <UserInput/>
         </ul>
       </nav>
     );

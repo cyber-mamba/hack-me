@@ -2,7 +2,7 @@ import React from "react";
 
 const LeftImageAndDescription = () => {
     return(
-        <td rowSpan={2}><img src="" alt="あなたの画像" style={{ border: "0"}} /><br/><br/>
+        <td rowSpan={2}><img src="http://localhost:3001/upload/c.png" width="100%" height="100%" alt="あなたの画像" style={{ border: "0"}} /><br/><br/>
         <table width="256">
           <tbody>
             <tr>

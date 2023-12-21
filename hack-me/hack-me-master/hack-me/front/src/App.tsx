@@ -41,7 +41,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div>
-          <h1 className="homePageTitle">{name_of_home_page}のホームページ</h1>
+          <h1 className="homePageTitle">{name_of_home_page}のホームページ</h1><h2 className='homePageSubTitle'>～ABE Hiroshiと学ぶサイバーセキュリティ～</h2>
         </div>
         <table className="table1">
           <td>
