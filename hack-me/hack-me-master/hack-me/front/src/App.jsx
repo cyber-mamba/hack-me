@@ -10,7 +10,7 @@ import GridBackgroundWIthText from './Functions/GridBackgroundWithText';
 import SideNav from './Functions/LeftNavigationMenu';
 import TableContents from './Functions/TableContents';
 import LeftImageAndDescription from "./Functions/LeftImageAndDescription";
-import UserInput from './UserInput';
+//import UserInput from './UserInput';
 
 
 const theme = createTheme({
@@ -35,7 +35,20 @@ const name_of_home_page = texts_to_repeat;
 const repeat_count = 4;
 const texts = Array(repeat_count).fill(texts_to_repeat);
 
+
+
 class App extends Component {
+  constructor(props: any){
+    super(props);
+    this.state = {
+      userName: "ABE Hiroshi"
+    };
+  }
+
+  setUserName = (newName: string) => {
+    this.setState({ userName: newName });
+  }
+
   render(){
     return(
       <ThemeProvider theme={theme}>
@@ -50,7 +63,7 @@ class App extends Component {
         
         <div style={{ display: 'flex', width: '100%' }}>
         <div style={{ flex: '0 0 auto' }}> {/* flex-grow: 0, flex-shrink: 0, flex-basis: auto */}
-          <SideNav/>
+          <SideNav userName={this.state.userName} setUserName={this.setUserName} />
         </div>
         <div style={{ flex: '0', marginLeft: '500px' }}> {/* flex-grow: 1, flex-shrink: 1, flex-basis: 0% */}
           <LeftImageAndDescription/>
