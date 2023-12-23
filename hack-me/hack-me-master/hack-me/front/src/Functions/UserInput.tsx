@@ -1,14 +1,17 @@
-import { useState, ChangeEvent } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
-const UserInput = () => {
+interface UserInputProps {
+    user_name: string;
+    setUserName: Dispatch<SetStateAction<string>>;
+}
 
-    const [user_name, setUserName] = useState("ABE Hiroshi");
+const UserInput: React.FC<UserInputProps> = ({ user_name, setUserName }) => {
 
     function getUserName() {
             alert(`${user_name}さん、ようこそ茂田オフィスへ！`);
         }
 
-    function handleInputChange(event: any) {
+    function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
         setUserName(event.target.value)
     }
 

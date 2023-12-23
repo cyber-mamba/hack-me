@@ -1,9 +1,15 @@
-import React from 'react';
 import { MyDropzoneBasic } from '../FileUpload';
 import UserInput from './UserInput';
+import React, { Dispatch, SetStateAction } from 'react';
 
-const SideNav = () => {
-    return (
+interface SideNavProps {
+  userName: string;
+  setUserName: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const SideNav: React.FC<SideNavProps> = ({ userName, setUserName }) => {
+
+    return (      
       <nav style={styles.nav}>
         <ul style={styles.ul}>
           <li style={styles.li1}><a href="http://localhost:3000" style={styles.a}>トップ</a></li>
@@ -14,7 +20,7 @@ const SideNav = () => {
           <li style={styles.li6}><a href="http://localhost:3000" style={styles.a}>出版本</a></li>
           <li style={styles.li7}><a href="http://localhost:3000" style={styles.a}>管理者</a></li>
           <MyDropzoneBasic/>
-          <UserInput/>
+          <UserInput user_name={userName} setUserName={setUserName}/>
         </ul>
       </nav>
     );
